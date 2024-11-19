@@ -75,12 +75,24 @@ li {
     flex-wrap: wrap;
 }
 
-.tea-item img {
+.tea-item {
     width: 300px;
     height: 200px;
-    margin: 0 15px;
+    margin: 15px;
     border: solid 1px #898076;
     border-radius: 10px;
+    overflow: hidden;
+}
+
+.tea-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s linear;
+}
+
+.tea-item img:hover {
+    transform: scale(1.2);
 }
 
 .tea-item p {
@@ -95,7 +107,7 @@ li {
     min-height: 500px;
     justify-content: center;
     align-content: center;
-    margin: 0 40px;
+    margin: 40px;
 }
 
 .locations-content {

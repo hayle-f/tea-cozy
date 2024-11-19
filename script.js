@@ -18,20 +18,15 @@ navLinks.forEach(link => {
 
 // jquery
 $(document).ready(function() {
-    // Al hacer clic en cualquier enlace de la navegación
-    $('.nav-links a').on('click', function(event) {
-      // Evitar el comportamiento predeterminado del enlace
-      event.preventDefault();
-
-      // Obtener el destino del enlace
+    $('.nav-links a').on('click', function(event) {      
+      event.preventDefault()
+  
       var target = $(this.getAttribute('href'));
 
-      // Si el destino existe
       if (target) {
-        // Hacer scroll suave al destino
         $('html, body').animate({
           scrollTop: target.offset().top
-        }, 1000); // 1000 milisegundos = 1 segundo
+        }, 1000); 
       }
     });
   });
